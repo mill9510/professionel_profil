@@ -85,3 +85,29 @@ footer {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+
+.from-left {
+  transition: opacity 1s ease-in-out, transform 1s ease;
+  opacity: 0;
+}
+.from-left {
+  transform: translateY(50%);
+}
+
+.from-left.appear {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.fade-in {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
