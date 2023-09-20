@@ -37,12 +37,12 @@ header p {
   grid-template-columns: repeat(2, 1fr);
 }
 
-img,
+.portrait,
 .intro_txt {
   grid-row: 1/2;
 }
 
-img {
+.portrait {
   grid-column: 2/3;
   width: 800px;
 }
@@ -79,11 +79,18 @@ p {
 }
 
 footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   background-color: #737159;
-
+  padding: 2rem;
   margin: 10px;
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.links {
+  justify-self: end;
+  align-self: end;
 }
 
 .from-left {
