@@ -62,15 +62,46 @@ p {
 }
 
 .about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.imgplaceholder,
+.about_welcome {
+  grid-row: 1/2;
+}
+
+.about_welcome {
+  grid-column: 2/3;
+  z-index: 1;
+}
+
+.imgplaceholder {
+  grid-column: 1/-1;
+  width: 800px;
+}
+
+.welcome {
+  font-size: 150px;
+  margin: 0px;
+}
+
+.welcome_txt {
+  width: 35rem;
+
+  /* margin-left: 20rem; */
+}
+
+.about {
   margin-top: 10rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background-color: #737159;
+  background-color: whitesmoke;
   margin-bottom: 10rem;
 }
 
 .imgplaceholder {
-  background-color: rgb(123, 123, 123);
+  background-color: #737159;
   padding: 5rem;
 }
 
@@ -86,6 +117,7 @@ footer {
   margin: 10px;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  color: whitesmoke;
 }
 
 .links {
