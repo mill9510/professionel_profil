@@ -22,6 +22,7 @@ h1 {
   /* font-family: "Gloock", serif; */
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 150px;
+
   margin-bottom: 10px;
 }
 
@@ -37,14 +38,20 @@ header p {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.portrait,
+.portrait_container,
 .intro_txt {
   grid-row: 1/2;
 }
 
-.portrait {
+.portrait_container {
   grid-column: 2/3;
-  width: 800px;
+  /* width: 800px; */
+
+  background-color: #737159;
+}
+
+.portrait {
+  margin: 0px;
 }
 
 .intro_txt {
@@ -84,12 +91,11 @@ p {
 .welcome {
   font-size: 150px;
   margin: 0px;
+  font-family: "PT Sans Narrow", sans-serif;
 }
 
 .welcome_txt {
   width: 35rem;
-
-  /* margin-left: 20rem; */
 }
 
 .about {
@@ -102,11 +108,10 @@ p {
 
 .imgplaceholder {
   background-color: #737159;
-  padding: 5rem;
 }
 
-.about_txt {
-  margin: 10px;
+.welcome_txt {
+  padding-left: 7rem;
 }
 
 footer {
@@ -149,4 +154,38 @@ footer {
   100% {
     opacity: 1;
   }
+}
+
+/*collapsible*/
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #737159;
+  color: whitesmoke;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  cursor: none;
+  margin-bottom: 1px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.collapsible:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+
+.content {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
