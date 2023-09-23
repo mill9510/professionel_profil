@@ -1,7 +1,15 @@
+:root {
+  --green-col: #737159;
+  --white-col: whitesmoke;
+  --regular-white-col: white;
+  --general-font: "PT Sans Narrow", sans-serif;
+}
+
 body {
-  background-color: whitesmoke;
+  background-color: var(--white-col);
   cursor: none;
-  margin: 10px;
+  margin: 10px auto;
+  max-width: 1400px;
 }
 
 .cursor {
@@ -20,14 +28,14 @@ body {
 
 h1 {
   /* font-family: "Gloock", serif; */
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: var(--general-font);
   font-size: 150px;
-
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
 header p {
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: var(--general-font);
   font-size: 20px;
   /* border: solid 1px black;
   border-radius: 50%; */
@@ -47,11 +55,14 @@ header p {
   grid-column: 2/3;
   /* width: 800px; */
 
-  background-color: #737159;
+  background-color: var(--green-col);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .portrait {
   margin: 0px;
+  width: 800px;
 }
 
 .intro_txt {
@@ -65,7 +76,7 @@ header p {
 
 h2,
 p {
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: var(--general-font);
 }
 
 .about {
@@ -89,9 +100,9 @@ p {
 }
 
 .welcome {
-  font-size: 150px;
+  font-size: 120px;
   margin: 0px;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: var(--general-font);
 }
 
 .welcome_txt {
@@ -102,12 +113,16 @@ p {
   margin-top: 10rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background-color: whitesmoke;
+  background-color: var(--white-col);
   margin-bottom: 10rem;
 }
 
 .imgplaceholder {
-  background-color: #737159;
+  background-color: var(--white-col);
+}
+
+.lottie {
+  text-align: center;
 }
 
 .welcome_txt {
@@ -117,12 +132,13 @@ p {
 footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background-color: #737159;
+  background-color: var(--green-col);
   padding: 2rem;
   margin: 10px;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  color: whitesmoke;
+  color: var(--white-col);
+  margin-top: 10rem;
 }
 
 .links {
@@ -158,10 +174,25 @@ footer {
 
 /*collapsible*/
 
+.collapsible_container h2 {
+  font-size: 120px;
+  margin-bottom: 2rem;
+}
+
+.collapsible_container {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.collapsible_container button {
+  font-size: 1.2rem;
+}
+
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
-  background-color: #737159;
-  color: whitesmoke;
+  font-family: var(--general-font);
+  background-color: var(--green-col);
+  color: var(--white-col);
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -176,16 +207,33 @@ footer {
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .collapsible:hover {
-  background-color: white;
+  background-color: var(--regular-white-col);
   color: black;
 }
 
 /* Style the collapsible content. Note: hidden by default */
 
 .content {
+  font-family: var(--general-font);
   padding: 0 18px;
-  background-color: white;
+  background-color: var(--regular-white-col);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.ex_link {
+  opacity: 0.8;
+  padding-bottom: 10px;
+}
+
+.ex_link img {
+  box-shadow: var(--green-col) 10px 5px 5px;
+  padding-left: 10px;
+}
+
+.ex_link:hover {
+  opacity: 1;
 }

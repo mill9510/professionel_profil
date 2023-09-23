@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Gloock&family=PT+Sans+Narrow&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
     <title>Document</title>
   </head>
   <body>
@@ -19,12 +21,14 @@
         <p>Som en ung kvinde på vej ind i den digitale branche, oplever jeg en verden fyldt med ubegrænsede muligheder og innovation. Teknologiens indflydelse vokser konstant, og det er inspirerende at være en del af denne udvikling, hvor uddannelse, nysgerrighed og netværk er nøglen til succes i denne spændende rejse.</p>
       </div>
       <div class="portrait_container">
-        <img class="portrait" src="/imgs/headshot_no_bg_2.png" alt="selvportræt" />
+        <img class="portrait" src="/imgs/test2.png" alt="selvportræt" />
       </div>
     </section>
 
     <section class="about slide-in from-left">
-      <div class="imgplaceholder"></div>
+      <div class="imgplaceholder">
+        <!-- <dotlottie-player class="lottie" src="https://lottie.host/3710c7da-9f09-4839-a295-b6618df20528/DUeGmoJORI.json" background="transparent" speed="1" style="width: 500px; height: 500px" loop autoplay></dotlottie-player> -->
+      </div>
       <div class="about_welcome">
         <h2 class="welcome">Velkommen</h2>
         <p class="welcome_txt">Mit navn er Mille.</p>
@@ -34,18 +38,26 @@
       </div>
     </section>
 
-    <section>
+    <section class="collapsible_container slide-in from-left">
+      <h2>Erfaring</h2>
       <button type="button" class="collapsible">World of Ukiyo</button>
-      <div class="content">
-        <p>I dette eksamensprojekt lød opgaven på at udarbejde et website for en selvvalgt virksomhed samt udarbejde en handlingsplan og content til virksomhedens SoMe aktiviteter.</p>
-        <p>Opgaven blev løst i en gruppe af fire, hvor min primære opgave lød på at kode sitet.</p>
-        <p>Websitet er kodet i Astro, som et open-source framework vi arbejdede i under 2. semester.</p>
-        <a href="https://worldofukiyo.netlify.app/"><img src="imgs/wou.png" alt="" /></a>
+      <div class="content wou_collapsible">
+        <div>
+          <p>I dette eksamensprojekt lød opgaven på at udarbejde et website for en selvvalgt virksomhed samt udarbejde en handlingsplan og content til virksomhedens SoMe aktiviteter.</p>
+          <p>Opgaven blev løst i en gruppe af fire, hvor min primære opgave lød på at kode sitet.</p>
+          <p>Websitet er kodet i Astro, som et open-source framework vi arbejdede i under 2. semester.</p>
+        </div>
+        <a class="ex_link" target="_blank" href="https://worldofukiyo.netlify.app/"><img src="imgs/wou_3.png" alt="" /></a>
       </div>
 
-      <button type="button" class="collapsible">Example 2</button>
+      <button type="button" class="collapsible">Omada Wine & Deli</button>
       <div class="content">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, iste minima provident officia, quaerat eius repellendus laborum doloribus exercitationem aut cumque, facilis odio numquam nesciunt molestias excepturi quisquam eaque assumenda!</p>
+        <div>
+          <p>I dette projekt lød opgaven på at udarbejde en webside for Omada Wine & Deli, som nyligt havde åbnet en Deli shop, som de ønskede også at repræsentere på deres website. Desuden skulle der udarbejdes en handlingsplan og content til virksomhedens SoMe aktiviteter.</p>
+          <p>Opgaven blev løst i en gruppe af fire, hvor min primære opgave lød på at kode sitet.</p>
+          <p>Websitet er kodet i Astro, som et open-source framework vi arbejdede i under 2. semester.</p>
+        </div>
+        <a class="ex_link" target="_blank" href="https://voluble-cajeta-c1e680.netlify.app/"><img src="imgs/omadawine.png" alt="" /></a>
       </div>
 
       <button type="button" class="collapsible">Example 3</button>
@@ -57,12 +69,12 @@
     <footer>
       <section>
         <h2>Vakte min person din interesse?</h2>
-        <h2>Contact</h2>
+        <h2>Kontakt</h2>
         <p>mill9510@stud.kea.dk</p>
       </section>
       <section class="links">
-        <a target="_blank" href="https://www.linkedin.com/in/mille-br%C3%B8ndum-henriksen-71202226a/"><img src="imgs/iconmonstr-linkedin-2.svg" alt="LinkedIn icon" /></a>
-        <a target="_blank" href="https://www.linkedin.com/in/mille-br%C3%B8ndum-henriksen-71202226a/"><img src="imgs/iconmonstr-github-2.svg" alt="GitHub icon" /></a>
+        <a target="_blank" href="https://www.linkedin.com/in/mille-br%C3%B8ndum-henriksen-71202226a/"><img src="imgs/iconmonstr-linkedin-2-24.png" alt="LinkedIn icon" /></a>
+        <a target="_blank" href="https://www.linkedin.com/in/mille-br%C3%B8ndum-henriksen-71202226a/"><img src="imgs/iconmonstr-github-2-24.png" alt="GitHub icon" /></a>
       </section>
     </footer>
     <script src="script.js"></script>
