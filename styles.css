@@ -1,3 +1,5 @@
+/************** genereal ***************/
+
 :root {
   --green-col: #737159;
   --white-col: whitesmoke;
@@ -26,20 +28,26 @@ body {
   z-index: 2;
 }
 
+h2,
+p {
+  font-family: var(--general-font);
+}
+
+/**************** header ***************/
+
 h1 {
-  /* font-family: "Gloock", serif; */
   font-family: var(--general-font);
   font-size: 150px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-header p {
-  font-family: var(--general-font);
+.intro p {
+  /* font-family: var(--general-font); */
   font-size: 20px;
-  /* border: solid 1px black;
-  border-radius: 50%; */
 }
+
+/************** header placement ***************/
 
 .intro {
   display: grid;
@@ -53,11 +61,7 @@ header p {
 
 .portrait_container {
   grid-column: 2/3;
-  /* width: 800px; */
-
   background-color: var(--green-col);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
 .portrait {
@@ -74,10 +78,7 @@ header p {
   width: 35rem;
 }
 
-h2,
-p {
-  font-family: var(--general-font);
-}
+/*************** about placement **************/
 
 .about {
   display: grid;
@@ -99,6 +100,8 @@ p {
   width: 800px;
 }
 
+/*********** about ***************/
+
 .welcome {
   font-size: 120px;
   margin: 0px;
@@ -107,6 +110,7 @@ p {
 
 .welcome_txt {
   width: 35rem;
+  padding-left: 7rem;
 }
 
 .about {
@@ -121,13 +125,11 @@ p {
   background-color: var(--white-col);
 }
 
-.lottie {
+.welcome_img {
   text-align: center;
 }
 
-.welcome_txt {
-  padding-left: 7rem;
-}
+/************** footer ****************/
 
 footer {
   display: grid;
@@ -145,6 +147,8 @@ footer {
   justify-self: end;
   align-self: end;
 }
+
+/************* animations ****************/
 
 .from-left {
   transition: opacity 1s ease-in-out, transform 1s ease;
@@ -172,7 +176,7 @@ footer {
   }
 }
 
-/*collapsible*/
+/************* collapsible **************/
 
 .collapsible_container h2 {
   font-size: 120px;
@@ -188,7 +192,6 @@ footer {
   font-size: 1.2rem;
 }
 
-/* Style the button that is used to open and close the collapsible content */
 .collapsible {
   font-family: var(--general-font);
   background-color: var(--green-col);
@@ -204,14 +207,11 @@ footer {
   margin-bottom: 1px;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .collapsible:hover {
   background-color: var(--regular-white-col);
   color: black;
 }
-
-/* Style the collapsible content. Note: hidden by default */
 
 .content {
   font-family: var(--general-font);
@@ -227,6 +227,7 @@ footer {
 .ex_link {
   opacity: 0.8;
   padding-bottom: 10px;
+  cursor: none;
 }
 
 .ex_link img {
@@ -236,4 +237,123 @@ footer {
 
 .ex_link:hover {
   opacity: 1;
+}
+
+/************* mobile tilpasninger **************/
+
+@media (max-width: 1100px) {
+  .cursor {
+    display: none;
+  }
+
+  /************* header **************/
+
+  .intro {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .portrait_container {
+    grid-column: 1;
+    grid-row: 1;
+    width: auto;
+  }
+
+  .portrait {
+    margin: 0px;
+    width: 30rem;
+  }
+
+  .intro_txt {
+    grid-column: 1;
+    grid-row: 2/3;
+    z-index: 1;
+  }
+
+  h1 {
+    font-size: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  .intro p {
+    font-size: 20px;
+    padding-left: 10px;
+    padding-left: 10px;
+    width: auto;
+  }
+
+  /************* about **************/
+
+  .about {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: auto;
+    margin-top: 2rem;
+  }
+
+  .about_welcome {
+    grid-column: 1;
+    grid-row: 2;
+    z-index: 1;
+  }
+
+  .imgplaceholder {
+    grid-column: 1;
+    grid-row: 1;
+    width: auto;
+    margin-top: 2rem;
+  }
+
+  .welcome {
+    font-size: 60px;
+    padding-left: 10px;
+  }
+
+  .welcome_txt {
+    padding-left: 10px;
+    width: auto;
+    font-size: 20px;
+  }
+
+  .welcome_img {
+    margin-bottom: 2rem;
+    width: 20rem;
+  }
+
+  /************* collapsible **************/
+
+  .collapsible_container h2 {
+    font-size: 60px;
+  }
+
+  .collapsible_container button {
+    font-size: 20px;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .ex_link {
+    opacity: 1;
+    padding-bottom: 10px;
+  }
+
+  .ex_link img {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  /************* header **************/
+  .portrait {
+    width: 20rem;
+  }
+
+  h1 {
+    font-size: 65px;
+  }
 }
