@@ -1,4 +1,7 @@
 /************** genereal ***************/
+* {
+  margin: 0;
+}
 
 :root {
   --green-col: #737159;
@@ -44,22 +47,23 @@ h1 {
 
 .intro p {
   font-size: 20px;
+  margin-left: 7px;
 }
 
 /************** header placement ***************/
 
 .intro {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(12, 1fr);
 }
 
 .portrait_container,
 .intro_txt {
-  grid-row: 1/2;
+  grid-row: 1 / -1;
 }
 
 .portrait_container {
-  grid-column: 2/3;
+  grid-column: 6 / -1;
   background-color: var(--green-col);
 }
 
@@ -69,8 +73,17 @@ h1 {
 }
 
 .intro_txt {
-  grid-column: 1/-1;
+  grid-column: 1 / 10;
   z-index: 1;
+}
+
+.txt_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.txt_grid h1 {
+  grid-column: span 2;
 }
 
 .intro_txt p {
